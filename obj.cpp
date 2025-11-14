@@ -12,7 +12,13 @@ void read_obj_file(const std::string &file_name) {
     while (input_file_stream.good()) {
         std::getline(input_file_stream, read_line);
 
-        std::cout << read_line << std::endl;
+        read_line.erase(
+            read_line.begin(),
+            std::find_if(
+                read_line.begin(), read_line.end(),
+                [](unsigned char c){ return !std::isspace(c); }
+            )
+        );
     }
 
     input_file_stream.close();
