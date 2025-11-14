@@ -2,3 +2,7 @@ app
 app.dSYM
 .DS_Store
 .vscode/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
