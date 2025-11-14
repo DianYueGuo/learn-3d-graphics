@@ -21,6 +21,8 @@ int main()
         std::cout << "Window or OpenGL context creation succeeded." << std::endl;
 
         while (!glfwWindowShouldClose(window)) {
+            glfwSwapBuffers(window);
+            glfwPollEvents();
         }
     } else {
         std::cout << "Window or OpenGL context creation failed." << std::endl;
