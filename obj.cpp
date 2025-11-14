@@ -12,8 +12,8 @@ void read_obj_file(const std::string &file_name, std::vector<Vector3D> &vertex_g
 
     std::string read_line;
 
-    while (input_file_stream.good()) {
-        std::getline(input_file_stream, read_line);
+    while (std::getline(input_file_stream, read_line)) {
+        std::cout << read_line << std::endl;
 
         read_line.erase(
             read_line.begin(),
