@@ -7,10 +7,11 @@ add_executable(
     src/main.cpp
     src/obj.cpp
     src/utility.cpp
+    glad/src/glad.c
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
-
+include_directories(${CMAKE_SOURCE_DIR}/glad/include)
 
 include(FetchContent)
 FetchContent_Declare(

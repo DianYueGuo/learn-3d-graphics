@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 
@@ -23,6 +24,13 @@ int main()
         return EXIT_FAILURE;
     }
     std::cout << "Window or OpenGL context creation succeeded." << std::endl;
+
+    glfwMakeContextCurrent(window);
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        std::cout << "Failed to initialize GLAD." << std::endl;
+        return EXIT_FAILURE;
+    }
+    std::cout << "Succeeded initializing GLAD." << std::endl;
 
     while (!glfwWindowShouldClose(window)) {
         glfwSwapBuffers(window);
