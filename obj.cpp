@@ -2,6 +2,8 @@
 
 #include <fstream>
 #include <iostream>
+#include <algorithm>
+#include <cctype>
 
 
 void read_obj_file(const std::string &file_name) {
