@@ -18,6 +18,9 @@ int main()
     GLFWwindow* window = glfwCreateWindow(640, 480, "My Title", NULL, NULL);
     if (window) {
         std::cout << "Window or OpenGL context creation successed." << std::endl;
+
+        while (!glfwWindowShouldClose(window)) {
+        }
     } else {
         std::cout << "Window or OpenGL context creation failed." << std::endl;
     }
