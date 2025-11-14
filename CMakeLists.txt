@@ -19,3 +19,4 @@ FetchContent_Declare(
   GIT_TAG        3.3.10
 )
 FetchContent_MakeAvailable(glfw)
+target_link_libraries(app PRIVATE glfw)
