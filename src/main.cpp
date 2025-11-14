@@ -22,6 +22,8 @@ int main()
         std::cout << "Window or OpenGL context creation failed." << std::endl;
     }
 
+    glfwDestroyWindow(window);
+
     glfwTerminate();
 
     return 0;
